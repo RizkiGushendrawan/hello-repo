@@ -67,8 +67,13 @@ const pelajaran = [
     {matapelajaran:"B.Inggris"},
     {matapelajaran:"Btq"},
 ]
-
-
+const btnmenu = document.querySelector(".open")
+const sidebar = document.querySelector(".offcanvas")
+const btnclose = document.querySelector(".btn-close")
+btnmenu.addEventListener('click',()=>{
+    sidebar.classList.add('show')
+})
+btnclose.addEventListener('click',()=> sidebar.classList.remove('show'))
 document.querySelector(".matpel").innerHTML = pelajaran.map((item)=>(
     `<div class="col">${item.matapelajaran}</div>`
 ))
